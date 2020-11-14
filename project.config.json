@@ -35,23 +35,29 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/dormitory/dormitory",
+          "pathName": "pages/dormitory/dormitory",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/usercenter/usercenter",
+          "pathName": "pages/usercenter/usercenter",
+          "scene": null
+        }
+      ]
     }
   }
 }
