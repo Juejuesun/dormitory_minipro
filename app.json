@@ -1,7 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/dormitory/dormitory",
+    "pages/usercenter/usercenter",
+    "pages/chatroom/chatroom",
+    "pages/flowerroom/flowerroom",
+    "pages/treehool/treehool",
+    "pages/studyroom/studyroom"
   ],
   "window":{
     "backgroundTextStyle":"light",

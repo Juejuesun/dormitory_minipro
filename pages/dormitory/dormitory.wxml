@@ -1,0 +1,17 @@
+<!--pages/dormitory/dormitory.wxml-->
+<view style="height: {{height}}px;">
+  <view class="tab">
+    <view class="tab-dormitory" bindtap="toMy">
+      <image class="dormitory-img" src="../../assets/tabbar/homeing.png"></image>
+    </view>
+    <view class="tab-treehool" bindtap="toMy">
+      <image class="treehool-img" src="../../assets/tabbar/Chat.png"></image>
+    </view>
+    <view class="tab-studyroom" bindtap="toMy">
+      <image class="studyroom-img" src="../../assets/tabbar/clock.png"></image>
+    </view>
+    <view class="tab-usercenter" bindtap="toMy">
+      <image class="usercenter-img" src="../../assets/tabbar/user.png"></image>
+    </view>
+  </view>
+</view>
