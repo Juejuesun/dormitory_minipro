@@ -1,0 +1,47 @@
+<!--pages/active/active.wxml-->
+<page-meta>
+  <navigation-bar
+    title="{{nbTitle}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+  />
+</page-meta>
+<image src="../../assets/treehool/comment.png" class="comment-img"></image>
+<view  class="mes-list">
+  <view class="mes-content">
+    <image src="../../assets/treehool/cellect.png" class="collect-img"></image>
+    <view class="mes-tip">
+      <view>#洞主</view>
+      <view>2020-8-11 10:00</view>
+    </view>
+    <view class="mes-text">
+        请问你们都是怎么看待打工人的？怎么保持良好的心态
+    </view>
+  </view>
+</view>
+<view class="comment-list" wx:if="{{false}}">
+  <view class="comment-content">
+    <view class="comment-tip">
+      <view>#1</view>
+      <view>2020-8-11 10:00</view>
+    </view>
+    <view class="comment-text">
+        请问你们都是怎么看待打工人的？怎么保持良好的心态
+    </view>
+  </view>
+</view>
+<view class="comment-window">
+  <view class="comment-input">
+    <view class="input-content">
+      <input type="text" placeholder="请输入评论内容..." placeholder-style="color:#828282;"/>
+    </view>
+  </view>
+  <view class="comment-button">
+    <view class="button-return">
+      撤销
+    </view>
+    <view class="button-publish">
+      发布
+    </view>
+  </view>
+</view>

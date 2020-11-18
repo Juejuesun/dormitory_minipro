@@ -1,2 +1,17 @@
 <!--pages/studyroom/studyroom.wxml-->
-<text>pages/studyroom/studyroom.wxml</text>
+<view style="height: {{height}}px;">
+  <view class="tab">
+    <view class="tab-dormitory" bindtap="toDormitory">
+      <image class="dormitory-img" src="../../assets/tabbar/home.png"></image>
+    </view>
+    <view class="tab-treehool" bindtap="toTreehool">
+      <image class="treehool-img" src="../../assets/tabbar/Chat.png"></image>
+    </view>
+    <view class="tab-studyroom" >
+      <image class="studyroom-img" src="../../assets/tabbar/clocking.png"></image>
+    </view>
+    <view class="tab-usercenter" bindtap="toUsercenter">
+      <image class="usercenter-img" src="../../assets/tabbar/user.png"></image>
+    </view>
+  </view>
+</view>

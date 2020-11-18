@@ -7,7 +7,8 @@
     "pages/chatroom/chatroom",
     "pages/flowerroom/flowerroom",
     "pages/treehool/treehool",
-    "pages/studyroom/studyroom"
+    "pages/studyroom/studyroom",
+    "pages/active/active"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -16,5 +17,9 @@
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "kbone": true, 
+    "weui": true
+  }
 }

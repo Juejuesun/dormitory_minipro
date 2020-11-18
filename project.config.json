@@ -125,6 +125,30 @@
         {
           "name": "pages/usercenter/usercenter",
           "pathName": "pages/usercenter/usercenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/studyroom/studyroom",
+          "pathName": "pages/studyroom/studyroom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/treehool/treehool",
+          "pathName": "pages/treehool/treehool",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/flowerroom/flowerroom",
+          "pathName": "pages/flowerroom/flowerroom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/active/active",
+          "pathName": "pages/active/active",
           "scene": null
         }
       ]
