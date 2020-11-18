@@ -1,1 +1,76 @@
 /* pages/flowerroom/flowerroom.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(254, 250, 238, 1);
+}
+.birdImg{
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  width: 300rpx;
+  height: 306rpx;
+}
+.fertilizerImg{
+  position: fixed;
+  top: 40%;
+  right: 1%;
+  width: 234rpx;
+  height: 260rpx;
+}
+.flowerImg{
+  position: fixed;
+  top: 50%;
+  right: -10%;
+  width: 700rpx;
+  height: 480rpx;
+}
+.logImg{
+  position: fixed;
+  top: 4%;
+  right: 0;
+  width: 256rpx;
+  height: 222rpx;
+}
+.sunImg{
+  position: fixed;
+  top: 0;
+  left: 4%;
+  width: 286rpx;
+  height: 294rpx;
+}
+.waterImg{
+  position: fixed;
+  top: 17%;
+  right: -2%;
+  width: 372rpx;
+  height: 354rpx;
+}
+.waterMes{
+  position: relative;
+  top: 46%;
+  left: 4%;
+  width: 286rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.waterTipImg{
+  width: 120rpx;
+  height: 120rpx;
+}
+.fertilizerMes{
+  position: relative;
+  top: 26%;
+  left: 4%;
+  width: 286rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.fertilizerTipImg{
+  width: 120rpx;
+  height: 120rpx;
+}

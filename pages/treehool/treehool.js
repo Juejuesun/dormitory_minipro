@@ -7,7 +7,21 @@ Page({
   data: {
 
   },
-
+  toDormitory(){
+    wx.redirectTo({
+      url: '/pages/dormitory/dormitory',
+    })
+  },
+  toStudyroom(){
+    wx.redirectTo({
+      url: '/pages/studyroom/studyroom',
+    })
+  },
+  toUsercenter(){
+    wx.redirectTo({
+      url: '/pages/usercenter/usercenter',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

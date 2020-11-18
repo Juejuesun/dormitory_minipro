@@ -1,16 +1,16 @@
 <!--pages/usercenter/usercenter.wxml-->
 <view style="height: {{height}}px;">
   <view class="tab">
-    <view class="tab-dormitory" bindtap="toMy">
+    <view class="tab-dormitory" bindtap="toDormitory">
       <image class="dormitory-img" src="../../assets/tabbar/home.png"></image>
     </view>
-    <view class="tab-treehool" bindtap="toMy">
+    <view class="tab-treehool" bindtap="toTreehool">
       <image class="treehool-img" src="../../assets/tabbar/Chat.png"></image>
     </view>
-    <view class="tab-studyroom" bindtap="toMy">
+    <view class="tab-studyroom" bindtap="toStudyroom">
       <image class="studyroom-img" src="../../assets/tabbar/clock.png"></image>
     </view>
-    <view class="tab-usercenter" bindtap="toMy">
+    <view class="tab-usercenter">
       <image class="usercenter-img" src="../../assets/tabbar/usering.png"></image>
     </view>
   </view>

@@ -1,2 +1,73 @@
 <!--pages/treehool/treehool.wxml-->
-<text>pages/treehool/treehool.wxml</text>
+<view style="height: {{height}}px;">
+  <mp-searchbar bindselectresult="selectResult" search="{{search}}" ext-class="search"></mp-searchbar>
+  <view class="tipbar">
+    <view class="tipbar-say">
+      <image class="say-img" src="../../assets/treehool/1.png"></image>
+      <view class="say-text">倾述区</view>
+    </view>
+    <view class="tipbar-help">
+      <image class="help-img" src="../../assets/treehool/2.png"></image>
+      <view class="help-text">互助区</view>
+    </view>
+    <view class="tipbar-love">
+      <image class="love-img" src="../../assets/treehool/3.png"></image>
+      <view class="love-text" >告白区</view>
+    </view>
+    <view class="tipbar-collect">
+      <image class="collect-img" src="../../assets/treehool/4.png"></image>
+      <view class="collect-text" >收藏</view>
+    </view>
+  </view>
+  <view class="mes-list">
+    <view class="mes-content">
+      <view class="mes-tip">
+        <text>#310343</text>
+      </view>
+      <view class="mes-text">
+        <view>
+          请问你们都是怎么看待打工人的？怎么保持良好的心态
+        </view>
+      </view>
+      <view class="mes-bar">
+        <view class="mes-time">2020-10-14 22:42</view>
+        <view class="mes-collectAndcomment">
+          <image class="collect-img" src="../../assets/treehool/star.png"></image>
+          <text class="collect-count">2</text>
+          <image class="comment-img" src="../../assets/treehool/comment_count.png"></image>
+          <text class="comment-text">34</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="comment-window">
+    <view class="comment-input">
+      <view class="input-content">
+        <input type="text" placeholder="请输入内容..." placeholder-style="color:#828282;"/>
+      </view>
+    </view>
+    <view class="comment-button">
+      <view class="button-return">
+        撤销
+      </view>
+      <view class="button-publish">
+        发布
+      </view>
+    </view>
+  </view>
+  <image src="../../assets/treehool/publish.png" class="publish-img"></image>
+  <view class="tab">
+    <view class="tab-dormitory" bindtap="toDormitory">
+      <image class="dormitory-img" src="../../assets/tabbar/home.png"></image>
+    </view>
+    <view class="tab-treehool">
+      <image class="treehool-img" src="../../assets/tabbar/Chating.png"></image>
+    </view>
+    <view class="tab-studyroom" bindtap="toStudyroom">
+      <image class="studyroom-img" src="../../assets/tabbar/clock.png"></image>
+    </view>
+    <view class="tab-usercenter" bindtap="toUsercenter">
+      <image class="usercenter-img" src="../../assets/tabbar/user.png"></image>
+    </view>
+  </view>
+</view>
