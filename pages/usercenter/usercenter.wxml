@@ -1,5 +1,61 @@
 <!--pages/usercenter/usercenter.wxml-->
 <view style="height: {{height}}px;">
+  <view class="user-top">
+    <view class="user-img"></view>
+    <view class="user-name">
+      <view class="name-text">
+        昵称
+        <image class="edit-img" src="../../assets/usercenter/edit.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="info-list">
+    <view >
+      <view class="info">
+        <view>
+          <image src="../../assets/usercenter/user_pin.png" class="user_pin-img"></image>
+        </view>
+        <text>学号：</text>
+        <input type="text" placeholder="student number" placeholder-style="color:#C2C2C2;"/>
+      </view>
+    </view>
+    <view >
+      <view class="info">
+        <view>
+          <image src="../../assets/usercenter/id_card.png" class="id_card-img"></image>
+        </view>
+        <text>姓名：</text>
+        <input type="text" placeholder="name" placeholder-style="color:#C2C2C2;"/>
+      </view>
+    </view>
+    <view>
+      <view class="info">
+        <view>
+          <image src="../../assets/usercenter/gender.png" class="gender-img"></image>
+        </view>
+        <text>性别：</text>
+        <input type="text" placeholder="gender" placeholder-style="color:#C2C2C2;"/>
+      </view>
+    </view>
+    <view>
+      <view class="info">
+        <view>
+          <image src="../../assets/usercenter/home_heart.png" class="home_heart-img"></image>
+        </view>
+        <text>宿舍：</text>
+        <input type="text" placeholder="dormitory ID" placeholder-style="color:#C2C2C2;"/>
+      </view>
+    </view>
+  </view>
+  <view class="control-bar">
+    <view class="bf-control" wx:if="{{false}}">
+      <view class="quit-room">退出宿舍</view>
+    </view>
+    <view class="af-control" wx:if="{{true}}">
+      <view class="build-room">自由组建</view>
+      <view class="find-person">兴趣匹配</view>
+    </view>
+  </view>
   <view class="tab">
     <view class="tab-dormitory" bindtap="toDormitory">
       <image class="dormitory-img" src="../../assets/tabbar/home.png"></image>

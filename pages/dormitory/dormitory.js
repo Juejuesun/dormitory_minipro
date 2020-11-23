@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    showBoard:false
   },
   toStudyroom(){
     wx.redirectTo({
@@ -20,6 +20,21 @@ Page({
   toUsercenter(){
     wx.redirectTo({
       url: '/pages/usercenter/usercenter',
+    })
+  },
+  toFlowerroom(){
+    wx.navigateTo({
+      url: '/pages/flowerroom/flowerroom',
+    })
+  },
+  toChatroom(){
+    wx.navigateTo({
+      url: '/pages/chatroom/chatroom',
+    })
+  },
+  showBlackboard(){
+    this.setData({
+      showBoard:!this.data.showBoard
     })
   },
   /**

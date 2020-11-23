@@ -1,4 +1,98 @@
 /* pages/studyroom/studyroom.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.top-bar{
+  width: 100%;
+  height: 76rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content:space-between;
+  justify-content: center;
+  border-top:  2rpx solid #BDBDBD;
+}
+.top-bar>view{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.fertilizer-img{
+  width: 48rpx;
+  height: 48rpx;
+}
+.flag-img{
+  width: 76rpx;
+  height: 76rpx;
+}
+.time-img{
+  width: 48rpx;
+  height: 48rpx;
+}
+.top-text{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(130,130,130,1);
+  font-size: 34rpx;
+  margin-top: 8%;
+}
+.mainclock{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+.mainclock-img{
+  width: 614rpx;
+  height: 614rpx;
+}
+.time-listen{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 70rpx;
+  color: rgba(79,79,79,1);
+  margin-top: -6%;
+}
+.control-bar{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 8%;
+  height: 142rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content:space-between;
+  justify-content: center;
+}
+.control-bar>view{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.control-bar image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.control-bar text{
+  font-size: 34rpx;
+}
+.begin-text{
+  color: rgba(66,166,109,0.85);
+}
+.end-text{
+  color: rgba(241,139,139,0.85);
+}
+.pause-text{
+  color: rgba(244,168,101,0.85);
+}
 .tab{
   position: fixed;
   width: 100%;

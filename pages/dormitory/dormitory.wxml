@@ -1,6 +1,22 @@
 <!--pages/dormitory/dormitory.wxml-->
-<view style="height: {{height}}px;">
+<view style="height: 100%; overflow: hidden; ">
   <image class="home-bg" src="../../assets/dormitory/bg.jpg"></image>
+  <view class="black-board">
+    <image class="exit-board" src="../../assets/dormitory/exit.png"></image>
+    <view class="board-content">
+      <view class="board-tip">宿舍公告栏</view>
+      <scroll-view class="board-list">
+        <view class="board-mes">
+          <view class="mes-img"></view>
+          <view class="mes-text">
+            <text>记得给花浇水</text>
+          </view>
+          <view style="position: absolute;bottom: 0;right: 0; font-size:24rpx;">小蓝 2020 10/30</view> 
+        </view>
+      </scroll-view>
+    </view>
+    <image class="add-mes" src="../../assets/dormitory/add.png"></image>
+  </view>
   <view class="tab">
     <view class="tab-dormitory">
       <image class="dormitory-img" src="../../assets/tabbar/homeing.png"></image>
@@ -15,4 +31,7 @@
       <image class="usercenter-img" src="../../assets/tabbar/user.png"></image>
     </view>
   </view>
+  <view class="blackboard" bindtap="showBlackboard"></view>
+  <view class="flowerroom" bindtap="toFlowerroom"></view>
+  <view class="phonecall" bindtap="toChatroom"></view>
 </view>

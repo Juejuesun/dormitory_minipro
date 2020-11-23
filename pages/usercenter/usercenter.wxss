@@ -1,4 +1,127 @@
 /* pages/usercenter/usercenter.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.user-top{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18%;
+}
+.user-img{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  border: 16rpx rgba(47, 128, 237, 0.5) solid;
+}
+.user-name{
+  width: 182rpx;
+  height: 70rpx;
+  border-bottom: 4rpx rgba(47, 128, 237, 0.5) solid;
+  position: relative;
+}
+.name-text{
+  width: 100%;
+  text-align: center;
+  font-size: 46rpx;
+
+}
+.edit-img{
+  width: 56rpx;
+  height: 56rpx;
+  position: absolute;
+  right: -20rpx;
+}
+.user-tip{
+  width: 242rpx;
+  height: 50rpx;
+}
+.info-list{
+  width: 100%;
+  margin-top: 6%;
+}
+.info-list>view{
+  width: 100%;
+  height: 108rpx;
+  border-bottom:2rpx solid #F2F2F2;
+}
+.info{
+  width: 80%;
+  margin: 0 auto;
+  height: 108rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 108rpx;
+}
+.info>view{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info>view image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.info>text{
+  font-size: 44rpx;
+  font-weight: 500;
+}
+.info>input{
+  text-align: start;
+  width: 60%;
+}
+.info>view .gender-img{
+  width: 46rpx;
+  height: 41rpx;
+  margin-right: 5%;
+}
+.control-bar{
+  width: 100%;
+  margin-top: 8%;
+}
+.bf-control{
+  width: 80%;
+  margin: 0 auto;
+}
+.quit-room{
+  width: 100%;
+  color: #EB5757;
+  border: 2rpx #EB5757 solid;
+  border-radius: 26rpx;
+  text-align: center;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.af-control{
+  width: 82%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 86rpx;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.af-control>view{
+  width: 44%;
+  color: #2F80ED;
+  border: 4rpx #2F80ED solid;
+  border-radius: 16rpx;
+  text-align: center;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
 .tab{
   position: fixed;
   width: 100%;
