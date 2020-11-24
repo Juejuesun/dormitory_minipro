@@ -28,13 +28,18 @@ page{
   width: 100%;
   text-align: center;
   font-size: 46rpx;
-
+  display: flex;
+  flex-direction: row;
+}
+.name-text>input{
+  height: 70rpx;
 }
 .edit-img{
   width: 56rpx;
   height: 56rpx;
   position: absolute;
-  right: -20rpx;
+  right: 30%;
+  bottom: 4%;
 }
 .user-tip{
   width: 242rpx;
@@ -77,6 +82,7 @@ page{
 .info>input{
   text-align: start;
   width: 60%;
+  font-size: 34rpx;
 }
 .info>view .gender-img{
   width: 46rpx;
@@ -110,8 +116,9 @@ page{
   height: 86rpx;
   flex-wrap: wrap;
   align-content: space-between;
+  position: relative;
 }
-.af-control>view{
+.build-room,.find-person{
   width: 44%;
   color: #2F80ED;
   border: 4rpx #2F80ED solid;
@@ -121,6 +128,68 @@ page{
   line-height: 86rpx;
   font-size: 36rpx;
   font-weight: 600;
+}
+.build-list{
+  width: 36%;
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  border: 4rpx #828282 solid;
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.build-list>view{
+  color: #4F4F4F;
+  font-size: 38rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-weight: 700;
+}
+.create-mes{
+  width: 80%;
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  border:2rpx #BDBDBD solid;
+  border-radius: 20rpx;
+  background-color: white;
+  z-index: 999;
+}
+.create-input{
+  width: 100%;
+  border-bottom: 2rpx #BDBDBD solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.create-input>view{
+  width: 80%;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+.create-input>view input{
+  background-color: #F2F2F2;
+  color: black;
+  font-size: 30rpx;
+}
+.control-create{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.control-create>view{
+  width: 50%;
+  font-size: 36rpx;
+  font-weight: 700;
+  text-align: center;
+}
+.accept{
+  border-right: 2rpx #BDBDBD solid;
 }
 .tab{
   position: fixed;

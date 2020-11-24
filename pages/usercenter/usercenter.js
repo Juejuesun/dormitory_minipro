@@ -1,11 +1,62 @@
 // pages/usercenter/usercenter.js
+import request from '../../service/network.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{
+      sex:'gender',
+      realName:'name',
+      dormitoryId:'dormitory ID',
+      studentNumber:'student number'
+    },
+    name:'',
+    showBuildroom:false,
+    showBuildmes:false,
+    roomId:'',
+    password:'',
+  },
+  joinRoom(){
+    request({
+      data:{
+        "userId":"123456",
+        "dormitoryId":this.data.roomId,
+        "joinPassword":this.data.password,
+      },
+      url: '/userCenter/createDormitory',
+    }).then(res => {
+      console.log(res)
+      this.changeCreate()  
+      this.changeBuild()
+    }).catch(err => {
+      
+    })
+  },
+  changeCreate(){
+    this.setData({
+      showBuildmes:!this.data.showBuildmes
+    })
+  },
+  changeBuild(){
+    this.setData({
+      showBuildroom:!this.data.showBuildroom
+    })
+  },
+  changeName(){
+    console.log(this.data.name)
+    request({
+      data:{
+        "userId":"123456",
+        "nickname":this.data.name,
+      },
+      url: 'userCenter/setNickname',
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      
+    })
   },
   toStudyroom(){
     wx.redirectTo({
@@ -26,7 +77,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    request({
+      data:{
+        "userId":"123456"
+      },
+      url: 'userCenter/getDetailsOfPeople',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        userInfo:res.data,
+        name:res.data.nickname
+      })
+    }).catch(err => {
+      
+    })
   },
 
   /**

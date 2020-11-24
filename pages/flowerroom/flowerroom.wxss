@@ -18,13 +18,6 @@ page{
   width: 234rpx;
   height: 260rpx;
 }
-.flowerImg{
-  position: fixed;
-  top: 50%;
-  right: -10%;
-  width: 700rpx;
-  height: 480rpx;
-}
 .logImg{
   position: fixed;
   top: 4%;
@@ -73,4 +66,18 @@ page{
 .fertilizerTipImg{
   width: 120rpx;
   height: 120rpx;
+}
+.flowerImg{
+  width: 140%;
+  height: 60%;
+  position: fixed;
+  left: -20%;
+  bottom: -10%;
+}
+.flowerLevel{
+  position: fixed;
+  right: 10%;
+  bottom: 6%;
+  font-size: 60rpx;
+  font-weight: 700;
 }

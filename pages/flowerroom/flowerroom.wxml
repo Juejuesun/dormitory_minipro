@@ -1,7 +1,6 @@
 <!--pages/flowerroom/flowerroom.wxml-->
 <image src="../../assets/flowerroom/bg1.png" class="birdImg"></image>
 <image src="../../assets/flowerroom/fertilizer.png" class="fertilizerImg"></image>
-<!-- <image src="../../assets/flowerroom/flower.png" class="flowerImg"></image> -->
 <image src="../../assets/flowerroom/logs.png" class="logImg"></image>
 <image src="../../assets/flowerroom/sun.png" class="sunImg"></image>
 <image src="../../assets/flowerroom/water.png" class="waterImg"></image>
@@ -12,5 +11,10 @@
 <view class="fertilizerMes">
   <image src="../../assets/flowerroom/fertilizer_tip.png" class="fertilizerTipImg"></image>
   <text style="font-size:28rpx;">已浇水10次</text>
+</view>
+<cover-image src="../../assets/flowerroom/flower2.gif" class="flowerImg"></cover-image>
+<text class="flowerLevel">Lv.1</text>
+<view>
+  
 </view>
 
