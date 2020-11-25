@@ -1,8 +1,12 @@
 <!--pages/dormitory/dormitory.wxml-->
 <view style="height: 100%; overflow: hidden; ">
+  <image class="head-img1 head" src="../../assets/dormitory/headimg1.png"></image>
+  <image class="head-img2 head" src="../../assets/dormitory/headimg2.png"></image>
+  <image class="head-img3 head" src="../../assets/dormitory/headimg3.png"></image>
+  <image class="head-img4 head" src="../../assets/dormitory/headimg4.png"></image>
   <image class="home-bg" src="../../assets/dormitory/bg.jpg"></image>
-  <view class="black-board">
-    <image class="exit-board" src="../../assets/dormitory/exit.png"></image>
+  <view class="black-board" wx:if="{{showBoard}}">
+    <image class="exit-board" src="../../assets/dormitory/exit.png" bindtap="showBlackboard"></image>
     <view class="board-content">
       <view class="board-tip">宿舍公告栏</view>
       <scroll-view class="board-list">
@@ -12,6 +16,10 @@
             <text>记得给花浇水</text>
           </view>
           <view style="position: absolute;bottom: 0;right: 0; font-size:24rpx;">小蓝 2020 10/30</view> 
+        </view>
+        <view class="board-mes">
+          <view class="mes-img"></view>
+          <input type="text" class="mes-input"/>
         </view>
       </scroll-view>
     </view>

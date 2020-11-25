@@ -1,13 +1,15 @@
 <!--pages/usercenter/usercenter.wxml-->
 <view style="height: {{height}}px;">
   <view class="user-top">
-    <view class="user-img"></view>
+    <view class="user-img">
+      <image src=""></image>
+    </view>
     <view class="user-name">
       <view class="name-text">
-        昵称
-        <image class="edit-img" src="../../assets/usercenter/edit.png"></image>
+        <input type="text" model:value="{{name}}"/>
       </view>
     </view>
+    <image class="edit-img" src="../../assets/usercenter/edit.png" bindtap="changeName"></image>
   </view>
   <view class="info-list">
     <view >
@@ -16,7 +18,7 @@
           <image src="../../assets/usercenter/user_pin.png" class="user_pin-img"></image>
         </view>
         <text>学号：</text>
-        <input type="text" placeholder="student number" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" placeholder="{{userInfo.studentNumber}}" placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
     <view >
@@ -25,7 +27,7 @@
           <image src="../../assets/usercenter/id_card.png" class="id_card-img"></image>
         </view>
         <text>姓名：</text>
-        <input type="text" placeholder="name" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" placeholder="{{userInfo.realName}}" placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
     <view>
@@ -34,7 +36,7 @@
           <image src="../../assets/usercenter/gender.png" class="gender-img"></image>
         </view>
         <text>性别：</text>
-        <input type="text" placeholder="gender" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" placeholder="{{userInfo.sex}}" placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
     <view>
@@ -43,7 +45,7 @@
           <image src="../../assets/usercenter/home_heart.png" class="home_heart-img"></image>
         </view>
         <text>宿舍：</text>
-        <input type="text" placeholder="dormitory ID" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" placeholder="{{userInfo.dormitoryId}}" placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
   </view>
@@ -52,8 +54,29 @@
       <view class="quit-room">退出宿舍</view>
     </view>
     <view class="af-control" wx:if="{{true}}">
-      <view class="build-room">自由组建</view>
+      <view class="build-room" bindtap="changeBuild">自由组建</view>
+      <view class="build-list" wx:if="{{showBuildroom}}">
+        <view class="create-room" bindtap="changeCreate">创建宿舍></view>
+        <view class="join-room">加入宿舍></view>
+        <view class="quit-list" wx:if="{{showBuildroom}}">取消</view>
+      </view>
       <view class="find-person">兴趣匹配</view>
+    </view>
+  </view>
+  <view class="create-mes" wx:if="{{showBuildmes}}">
+    <view class="create-input">
+      <view class="room-id">
+        <text>宿舍ID：</text>
+        <input type="text" placeholder="请输入四位数字" placeholder-style="color:#BDBDBD;" model:value="{{roomId}}"/>
+      </view>
+      <view class="room-password">
+        <text>宿舍密码：</text>
+        <input type="text" placeholder="请输入六位数字" placeholder-style="color:#BDBDBD;" model:value="{{password}}"/>
+      </view>
+    </view>
+    <view class="control-create">
+      <view class="accept" bindtap="joinRoom">确认加入</view>
+      <view bindtap="changeCreate">取消</view>
     </view>
   </view>
   <view class="tab">

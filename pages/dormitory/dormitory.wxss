@@ -4,6 +4,30 @@ page{
   width: 100%;
   overflow: hidden;
 }
+.head{
+  width: 144rpx;
+  height: 144rpx;
+}
+.head-img1{
+  position: fixed;
+  top: 14%;
+  left: 10%;
+}
+.head-img2{
+  position: fixed;
+  top: 14%;
+  right: 10%;
+}
+.head-img3{
+  position: fixed;
+  top: 50%;
+  left: 10%;
+}
+.head-img4{
+  position: fixed;
+  top: 50%;
+  right: 10%;
+}
 .home-bg{
   position: fixed;
   z-index: -1;
@@ -82,6 +106,7 @@ page{
   align-items: flex-start;
   position: relative;
   height: 100rpx;
+  margin-top: 20rpx;
 }
 .mes-img{
   width: 36rpx;
