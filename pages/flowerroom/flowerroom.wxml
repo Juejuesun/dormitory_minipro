@@ -1,7 +1,7 @@
 <!--pages/flowerroom/flowerroom.wxml-->
 <image src="../../assets/flowerroom/bg1.png" class="birdImg"></image>
 <image src="../../assets/flowerroom/fertilizer.png" class="fertilizerImg"></image>
-<image src="../../assets/flowerroom/logs.png" class="logImg"></image>
+<image src="../../assets/flowerroom/logs.png" class="logImg" bindtap="changeLog"></image>
 <image src="../../assets/flowerroom/sun.png" class="sunImg"></image>
 <image src="../../assets/flowerroom/water.png" class="waterImg"></image>
 <view class="waterMes">
@@ -12,9 +12,30 @@
   <image src="../../assets/flowerroom/fertilizer_tip.png" class="fertilizerTipImg"></image>
   <text style="font-size:28rpx;">已浇水10次</text>
 </view>
-<cover-image src="../../assets/flowerroom/flower2.gif" class="flowerImg"></cover-image>
+<cover-image src="https://pic.downk.cc/item/5fbe4bd6b18d627113a77160.gif" class="flowerImg"></cover-image>
 <text class="flowerLevel">Lv.1</text>
-<view>
-  
+<view class="flower-log" wx:if="{{showLog}}">
+  <view class="log-tip">
+    <view>35#211的花</view>
+    <image class="exit-log" src="../../assets/flowerroom/exit.png" bindtap="changeLog"></image>
+  </view>
+  <view class="log-flower">
+    <view  class="log-flower-content">
+      <image class="content-img" src="../../assets/flowerroom/flower.png" ></image>
+      <view class="content-mes">
+        <view>当前水量：</view>
+        <view>当前肥料：</view>
+        <view>当前等级：</view>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="log-list">
+    <view class="log-row">
+      <image class="row-img"></image>
+      <view class="row-content">
+        PJMM 来施肥啦~
+      </view>
+    </view>
+  </scroll-view>
 </view>
 

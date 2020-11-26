@@ -5,7 +5,60 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    img1:'../../assets/treehool/1_check.png',
+    img2:'../../assets/treehool/2.png',
+    img3:'../../assets/treehool/3.png',
+    img4:'../../assets/treehool/4.png',
+    showWriteActive:false,
+  },
+  changeShowWrite(){
+    this.setData({
+      showWriteActive:!this.data.showWriteActive
+    })
+  },
+  changeBrock(e){
+    console.log(e)
+    switch(e.currentTarget.id){
+      case "1":
+        this.setData({
+          img1:'../../assets/treehool/1_check.png',
+          img2:'../../assets/treehool/2.png',
+          img3:'../../assets/treehool/3.png',
+          img4:'../../assets/treehool/4.png',
+        })
+        break;
+      case "2":
+        this.setData({
+          img1:'../../assets/treehool/1.png',
+          img2:'../../assets/treehool/2_check.png',
+          img3:'../../assets/treehool/3.png',
+          img4:'../../assets/treehool/4.png',
+        })
+        break;
+      case "3":
+        this.setData({
+          img1:'../../assets/treehool/1.png',
+          img2:'../../assets/treehool/2.png',
+          img3:'../../assets/treehool/3_check.png',
+          img4:'../../assets/treehool/4.png',
+        })
+        break;
+      case "4":
+        this.setData({
+          img1:'../../assets/treehool/1.png',
+          img2:'../../assets/treehool/2.png',
+          img3:'../../assets/treehool/3.png',
+          img4:'../../assets/treehool/4_check.png',
+        })
+        break;
+      default:
+        break;
+ } 
+  },
+  toActive(){
+    wx.navigateTo({
+      url: '/pages/active/active',
+    })
   },
   toDormitory(){
     wx.redirectTo({

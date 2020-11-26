@@ -1,5 +1,6 @@
 // pages/usercenter/usercenter.js
 import request from '../../service/network.js'
+const app = getApp()
 Page({
 
   /**
@@ -17,24 +18,91 @@ Page({
     showBuildmes:false,
     roomId:'',
     password:'',
+    showQuit:false,
+    showBuild:false,
+    showJoinmes:false,
+    showQuitmes:false
   },
-  joinRoom(){
+  quitRoom(){
     request({
       data:{
-        "userId":"123456",
-        "dormitoryId":this.data.roomId,
-        "joinPassword":this.data.password,
+        "userId":app.globalData.userId,
       },
-      url: '/userCenter/createDormitory',
+      url: 'userCenter/quitDormitory',
     }).then(res => {
       console.log(res)
-      this.changeCreate()  
+      this.changeQuit()  
       this.changeBuild()
     }).catch(err => {
       
     })
   },
+  createRoom(){
+    request({
+      data:{
+        "userId":app.globalData.userId,
+        "dormitoryId":this.data.roomId,
+        "joinPassword":this.data.password,
+      },
+      url: 'userCenter/createDormitory',
+    }).then(res => {
+      console.log(res)
+      this.quitCreate()  
+      this.changeBuild()
+    }).catch(err => {
+      
+    })
+  },
+  quitJoin(){
+    this.setData({
+      showJoinmes:!this.data.showJoinmes,
+      roomId:'',
+      password:''
+    })
+  },
+  joinRoom(){
+    request({
+      data:{
+        "userId":app.globalData.userId,
+        "dormitoryId":this.data.roomId,
+        "joinPassword":this.data.password,
+      },
+      url: 'userCenter/joinDormitory',
+    }).then(res => {
+      console.log(res)
+      this.quitJoin()  
+      this.changeBuild()
+    }).catch(err => {
+      
+    })
+  },
+  quitCreate(){
+    this.setData({
+      showBuildmes:!this.data.showBuildmes,
+      roomId:'',
+      password:''
+    })
+  },
+  changeJoin(){
+    this.setData({
+      showJoinmes:!this.data.showJoinmes,
+    })
+  },
+  changeQuit(){
+    this.setData({
+      showQuitmes:!this.data.showQuitmes
+    })
+  },
   changeCreate(){
+    request({
+      url: 'userCenter/randomDormitoryId',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        roomId:res.data.dormitoryId
+      })
+    }).catch(err => {
+    })
     this.setData({
       showBuildmes:!this.data.showBuildmes
     })
@@ -48,7 +116,7 @@ Page({
     console.log(this.data.name)
     request({
       data:{
-        "userId":"123456",
+        "userId":app.globalData.userId,
         "nickname":this.data.name,
       },
       url: 'userCenter/setNickname',
@@ -79,7 +147,7 @@ Page({
   onLoad: function (options) {
     request({
       data:{
-        "userId":"123456"
+        "userId":app.globalData.userId
       },
       url: 'userCenter/getDetailsOfPeople',
     }).then(res => {
@@ -88,6 +156,17 @@ Page({
         userInfo:res.data,
         name:res.data.nickname
       })
+      if(res.data.dormitoryId==0){
+        this.setData({
+          showQuit:false,
+          showBuild:true,
+        })
+      }else{
+        this.setData({
+          showQuit:true,
+          showBuild:false,
+        })
+      }
     }).catch(err => {
       
     })

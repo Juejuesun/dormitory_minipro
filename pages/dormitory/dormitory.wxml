@@ -4,7 +4,7 @@
   <image class="head-img2 head" src="../../assets/dormitory/headimg2.png"></image>
   <image class="head-img3 head" src="../../assets/dormitory/headimg3.png"></image>
   <image class="head-img4 head" src="../../assets/dormitory/headimg4.png"></image>
-  <image class="home-bg" src="../../assets/dormitory/bg.jpg"></image>
+  <image class="home-bg" src="https://pic.downk.cc/item/5fbe44d2b18d627113a4b9a0.jpg"></image>
   <view class="black-board" wx:if="{{showBoard}}">
     <image class="exit-board" src="../../assets/dormitory/exit.png" bindtap="showBlackboard"></image>
     <view class="board-content">

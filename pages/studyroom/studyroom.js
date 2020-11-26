@@ -1,11 +1,103 @@
 // pages/studyroom/studyroom.js
+import request from '../../service/network.js'
+const app = getApp()
+const time = require("../../utils/util.js");
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    currentTab: 0,
+    fertilizerQuantity:0,
+    studyTimeTotal:0,
+    numberOfStudy:0,
+    M:'',
+    S:'',
+    count:0,
+    timer:0,
+    today_check:'today-card-hover',
+    week_check:'week-card'
+  },
+  switchNav: function(e) {
+    var page = this;
+    var id = e.target.id;
+    if (this.data.currentTab == id) {
+      return false;
+    } else {
+      page.setData({
+        currentTab: id
+      });
+    }
+  },
+  changeCss(){
+    if(this.data.today_check=='today-card-hover'){
+      this.setData({
+        today_check:'today-card',
+        week_check:'week-card-hover'
+      })
+    }else{
+      this.setData({
+        today_check:'today-card-hover',
+        week_check:'week-card'
+      })
+    }
+  },
+  showNum(num){
+    if (num < 10) {
+        return '0' + num
+    }
+    return num
+  },
+  begin(){
+    var that=this
+    request({
+      url: 'study/beginStudy',
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+    })
+    var count=this.data.count
+    var timer = setInterval(function(){
+      count++
+      var S=that.showNum(count % 60)
+      var M=that.showNum(parseInt(count / 60) % 60)
+      that.setData({
+        count:count,
+        M:M,
+        S:S
+      })
+    },1000)
+    this.setData({
+      timer:timer
+    })
+  },
+  pause(){
+    request({
+      url: 'study/stopStudy',
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+    })
+    clearInterval(this.data.timer)
+  },
+  end(){
+    clearInterval(this.data.timer)
+    request({
+      data:{
+        "userId":app.globalData.userId,
+        "studyTime":this.data.count
+      },
+      url: 'study/recorddStudy',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        M:'00',
+        S:'00',
+        count:0,
+        timer:0,
+      })
+    }).catch(err => {
+    })
   },
   toDormitory(){
     wx.redirectTo({
@@ -26,7 +118,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    request({
+      data:{
+        "userId":app.globalData.userId,
+      },
+      url: 'study/getInf',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        fertilizerQuantity:res.data.fertilizerQuantity||0,
+        studyTimeTotal:res.data.studyTimeTotal||0,
+        numberOfStudy:res.data.numberOfStudy||0,
+        M:'00',
+        S:'00',
+      })
+    }).catch(err => {
+      
+    })
   },
 
   /**

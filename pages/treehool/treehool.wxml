@@ -3,24 +3,24 @@
   <mp-searchbar bindselectresult="selectResult" search="{{search}}" ext-class="search"></mp-searchbar>
   <view class="tipbar">
     <view class="tipbar-say">
-      <image class="say-img" src="../../assets/treehool/1.png"></image>
+      <image class="say-img" src="{{img1}}" id="1" bindtap="changeBrock"></image>
       <view class="say-text">倾述区</view>
     </view>
     <view class="tipbar-help">
-      <image class="help-img" src="../../assets/treehool/2.png"></image>
+      <image class="help-img" src="{{img2}}" id="2" bindtap="changeBrock"></image>
       <view class="help-text">互助区</view>
     </view>
     <view class="tipbar-love">
-      <image class="love-img" src="../../assets/treehool/3.png"></image>
+      <image class="love-img" src="{{img3}}" id="3" bindtap="changeBrock"></image>
       <view class="love-text" >告白区</view>
     </view>
     <view class="tipbar-collect">
-      <image class="collect-img" src="../../assets/treehool/4.png"></image>
+      <image class="collect-img" src="{{img4}}" id="4" bindtap="changeBrock"></image>
       <view class="collect-text" >收藏</view>
     </view>
   </view>
   <view class="mes-list">
-    <view class="mes-content">
+    <view class="mes-content" bindtap="toActive">
       <view class="mes-tip">
         <text>#310343</text>
       </view>
@@ -40,22 +40,22 @@
       </view>
     </view>
   </view>
-  <view class="comment-window">
+  <view class="comment-window" wx:if="{{showWriteActive}}">
     <view class="comment-input">
       <view class="input-content">
         <input type="text" placeholder="请输入内容..." placeholder-style="color:#828282;"/>
       </view>
     </view>
     <view class="comment-button">
-      <view class="button-return">
+      <view class="button-return" bindtap="changeShowWrite">
         撤销
       </view>
-      <view class="button-publish">
+      <view class="button-publish" bindtap="Publish">
         发布
       </view>
     </view>
   </view>
-  <image src="../../assets/treehool/publish.png" class="publish-img"></image>
+  <image src="../../assets/treehool/publish.png" class="publish-img" bindtap="changeShowWrite"></image>
   <view class="tab">
     <view class="tab-dormitory" bindtap="toDormitory">
       <image class="dormitory-img" src="../../assets/tabbar/home.png"></image>

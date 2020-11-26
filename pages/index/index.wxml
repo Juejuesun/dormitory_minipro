@@ -1,13 +1,16 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<swiper class="introduce" indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.1)" indicator-active-color="#ffffff">
+  <swiper-item>
+    <image src="https://pic.downk.cc/item/5fbe496eb18d627113a6cf8f.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://pic.downk.cc/item/5fbe4975b18d627113a6d185.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://pic.downk.cc/item/5fbe4972b18d627113a6d071.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://pic.downk.cc/item/5fbe4ca5b18d627113a7a94c.jpg"></image>
+    <button class='bottom' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type='primary' style="width:60%;  color:#2F80ED;  background-color:white; border-radius: 40rpx; position:fixed; border:4rpx #2F80ED solid; left:20%; top:86%"> 入住适友阁</button>
+  </swiper-item>
+</swiper>

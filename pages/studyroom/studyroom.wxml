@@ -3,38 +3,69 @@
   <view class="top-bar">
     <view class="fertilizer">
       <image class="fertilizer-img" src="../../assets/studyroom/bolt.png"></image>
-      <text>: 3袋</text>
+      <text>: {{fertilizerQuantity}}袋</text>
     </view>
     <view class="flag">
       <image class="flag-img" src="../../assets/studyroom/flag.png"></image>
     </view>
     <view class="time">
       <image class="time-img" src="../../assets/studyroom/clock.png"></image>
-      <text>: 3h</text>
+      <text>: {{studyTimeTotal}}h</text>
     </view>
   </view>
   <view class="top-text">
-    目前有31人在和你一起学习
+    目前有{{numberOfStudy}}人在和你一起学习
   </view>
   <view class="mainclock">
     <image src="../../assets/studyroom/main_clock.png" class="mainclock-img"></image>
   </view>
   <view class="time-listen">
-    <text>0 0 : 0 0</text>
+    <text>{{M}} : {{S}}</text>
   </view>
   <view class="control-bar">
-    <view class="begin">
+    <view class="begin" bindtap="begin">
       <image class="begin-img" src="../../assets/studyroom/begin.png"></image>
       <text class="begin-text">开 始</text>
     </view>
-    <view class="pause">
+    <view class="pause" bindtap="pause">
       <image class="pause-img" src="../../assets/studyroom/pause.png"></image>
       <text class="pause-text">暂 停</text>
     </view>
-    <view class="end">
+    <view class="end" bindtap="end">
       <image class="end-img" src="../../assets/studyroom/end.png"></image>
       <text class="end-text">结 束</text>
     </view>
+  </view>
+  <view class="bg" wx:if="{{true}}"></view>
+  <view class="time-list" wx:if="{{true}}">
+    <view class="list-tab">
+      时长排行榜
+      <image src="../../assets/treehool/arrow_down.png" class="quit-time"></image>
+    </view>
+    <view class="list-bar">
+      <view class="{{today_check}}" bindtap='switchNav' id="0">今日排行</view>
+      <view class="{{week_check}}" bindtap='switchNav' id="1">本周排行</view>
+    </view>
+    <swiper style='height:840rpx;' current='{{currentTab}}' vertical="{{false}}" bindchange="changeCss">
+      <swiper-item class="today-list" id='0'>
+        <scroll-view class="list-content">
+          <view class="list-row">
+            <image class="person-img"></image>
+            <view class="person-name"></view>
+            <view class="person-time"></view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item class="week-list" id='1'>
+        <scroll-view class="list-content">
+          <view class="list-row">
+            <image class="person-img"></image>
+            <view class="person-name"></view>
+            <view class="person-time"></view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
   </view>
   <view class="tab">
     <view class="tab-dormitory" bindtap="toDormitory">
