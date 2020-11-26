@@ -3,7 +3,23 @@
 .textStyle {
   font-size: 35rpx;
 }
-.leftBox {
+.textBox {
   background-color: #ffffff;
   max-width: 65%;
+  border-radius: 30rpx;
+  margin: 20rpx;
+  padding: 30rpx;
+}
+
+.bubbleBoxLeft {
+  display: flex;
+  flex: 1;
+
+  margin: 30rpx;
+}
+.bubbleBoxRight {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin: 30rpx;
 }

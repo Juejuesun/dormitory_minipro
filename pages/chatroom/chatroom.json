@@ -4,7 +4,9 @@
     "van-field": "@vant/weapp/field/index",
     "van-nav-bar": "@vant/weapp/nav-bar/index",
     "van-card": "@vant/weapp/card/index",
+    "van-icon": "@vant/weapp/icon/index",
     "chat-bubble": "../../components/bubble/bubble"
   },
-  "navigationBarTitleText": "聊天室"
+  "navigationBarTitleText": "聊天室",
+  "disableScroll": false
 }

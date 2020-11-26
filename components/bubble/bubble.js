@@ -4,7 +4,18 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    type: {
+      type: String,
+      value: 'left'
+    },
+    context: {
+      type: String,
+      value: ''
+    },
+    avadar: {
+      type: String,
+      value: 'avadar'
+    }
   },
 
   /**

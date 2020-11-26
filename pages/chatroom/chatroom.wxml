@@ -1,18 +1,22 @@
 <!--pages/chatroom/chatroom.wxml-->
 <view class="bgc">
-	<van-nav-bar right-text="X" bind:click-right="onClickRight" />
+	<van-nav-bar bind:click-right="onClickRight" safe-area-inset-top="false">
+		<van-icon name="cross" slot="right" class="iconbox"/>
+	</van-nav-bar>
 	<!-- <view class="imgHead">
 		<image src="../../assets/chatroom/close.png" mode='aspectFit' class="imgClose"></image>
 	</view> -->
-  <view>
-    <chat-bubble/>
-  </view>
+	<scroll-view scroll-y="true" style="height: {{height*2}}rpx" scroll-into-view="{{toView}}">
+		<view wx:for="{{chatList}}" wx:key = "index" id="item{{index}}">
+			<chat-bubble type="{{item.types}}" context="{{item.constext}}" avadar="{{item.avadar}}" />
+		</view>
+	</scroll-view>
 	<view class="inputBox">
 		<van-cell-group class="inputBtn">
-			<van-field value="{{ sms }}" center border="{{ false }}" class="inoutIn">
+			<van-field model:value="{{ value }}" center border="{{ false }}" class="inoutIn" custom-style="background: #F2F2F2; border-radius: 25rpx;">
 				<!-- <van-button slot="button" type="primary">发送验证码</van-button> -->
 			</van-field>
-			<van-button type="primary" class="btnIn">按钮</van-button>
+			<van-button type="primary" class="btnIn" custom-style="border-radius: 25rpx;" bindtap="pushChat">发送</van-button>
 		</van-cell-group>
 	</view>
 </view>
