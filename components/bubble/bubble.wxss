@@ -1,0 +1,9 @@
+/* components/bubble/bubble.wxss */
+
+.textStyle {
+  font-size: 35rpx;
+}
+.leftBox {
+  background-color: #ffffff;
+  max-width: 65%;
+}

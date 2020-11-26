@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
@@ -13,7 +12,7 @@
 		"minified": true,
 		"newFeature": false,
 		"coverView": true,
-		"nodeModules": false,
+		"nodeModules": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -29,7 +28,14 @@
 		},
 		"useIsolateContext": true,
 		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ]
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.14.0",
@@ -68,104 +74,4 @@
 			"list": []
 		}
 	}
-=======
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "enhance": false,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
-    "coverView": true,
-    "nodeModules": false,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
-    "useApiHook": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "enableEngineNative": false,
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.14.0",
-  "appid": "wx297ad8e730eb9834",
-  "projectname": "dormitory_minipro",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/dormitory/dormitory",
-          "pathName": "pages/dormitory/dormitory",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/usercenter/usercenter",
-          "pathName": "pages/usercenter/usercenter",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/studyroom/studyroom",
-          "pathName": "pages/studyroom/studyroom",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/treehool/treehool",
-          "pathName": "pages/treehool/treehool",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/flowerroom/flowerroom",
-          "pathName": "pages/flowerroom/flowerroom",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/active/active",
-          "pathName": "pages/active/active",
-          "scene": null
-        }
-      ]
-    }
-  }
->>>>>>> 2f19030ef59dc06384dec43d7c1c4d28fbcdbd80
 }
