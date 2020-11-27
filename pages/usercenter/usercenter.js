@@ -102,6 +102,7 @@ Page({
     })
   },
   changeCreate(){
+    console.log(1)
     request({
       url: 'userCenter/randomDormitoryId',
     }).then(res => {
