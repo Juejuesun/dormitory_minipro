@@ -1,4 +1,7 @@
 // pages/dormitory/dormitory.js
+import request from '../../service/network.js'
+import { format } from '../../utils/util.js'
+const app = getApp()
 Page({
 
   /**
@@ -8,6 +11,8 @@ Page({
     showBoard:false,
     isfocus: false,
     value: '',
+    toView: 'itemInput',
+    height: 0,
     blackList: [
       {
         content: '记得给花浇水。',
@@ -48,33 +53,83 @@ Page({
     this.setData({
       showBoard:!this.data.showBoard
     })
+    this.getHeight()
+    // console.log(format(1606144511000))
+    this.getBlackBoard()
   },
   addnewmes() {
     this.setData({
       isfocus: true
     })
   },
-  blurfocus() {
-    let ls = this.data.blackList
-    ls.push({
-      content: this.data.value,
-      time: '小蓝 2020 10/30'
+  async pushems() {
+    if(this.data.value) {
+      const { data } = await request({
+        data:{
+          dormitoryId: 153432,
+          userId: app.globalData.userId,
+          content: this.data.value
+        },
+        url: 'dormitory/leaveMessage',
+      })
+      if(data.status == 'succeed') {
+        await this.getBlackBoard()
+        this.setData({
+          isfocus: false,
+          value: ''
+        })
+      }
+    }
+  },
+  proms() {
+    let promise = new Promise(function (resolve, reject) {
+      let query = wx.createSelectorQuery();
+      query.select('#cont').boundingClientRect()
+      query.exec(function (res) {  
+        // console.log(res);
+        // console.log(res[0].height);
+        let ss = res[0].height
+        resolve(ss);
+      })
     })
+    return promise
+  },
+  async getHeight() {
+    let he = await this.proms() - 80
     this.setData({
-      isfocus: false,
-      blackList: ls,
-      value: ''
+      height: he
     })
   },
-  pushems() {
-    console.log(this.data.value)
-    this.blurfocus
+  getBlackBoard() {
+    request({
+      data:{
+        "dormitoryId": 153432,
+      },
+      url: 'dormitory/getMessageBoard',
+    }).then(res => {
+      console.log(res)
+      let data = res.data
+      if(data.status == 'succeed') {
+        let con = []
+        for(let val of data.messages) {
+          console.log(format(val.messageTime))
+          con.push({
+            content: val.messageContent,
+            time: val.nickname+ ' ' + format(val.messageTime).toString()
+          })
+        }
+        this.setData({
+          blackList: con
+        })
+      }
+    }).catch(err => {
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**
