@@ -18,6 +18,11 @@ page{
   border-radius: 50%;
   border: 16rpx rgba(47, 128, 237, 0.5) solid;
 }
+.user-img>image{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+}
 .user-name{
   width: 182rpx;
   height: 70rpx;

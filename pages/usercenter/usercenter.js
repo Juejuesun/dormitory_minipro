@@ -40,6 +40,7 @@ Page({
       url: 'userCenter/quitDormitory',
     }).then(res => {
       console.log(res)
+      this.changeQuit()
       this.onLoad()
     }).catch(err => {
       
@@ -57,6 +58,7 @@ Page({
       console.log(res)
       this.quitCreate()  
       this.changeBuild()
+      this.onLoad()
     }).catch(err => {
       
     })
@@ -80,6 +82,7 @@ Page({
       console.log(res)
       this.quitJoin()  
       this.changeBuild()
+      this.onLoad()
     }).catch(err => {
       
     })
@@ -126,11 +129,11 @@ Page({
     request({
       data:{
         "userId":app.globalData.userId,
-        "studentNumber":this.data.studentNumber,
-        "userSex":this.data.userSex,
-        "userRealName":this.data.userRealName,
+        "studentNumber":this.data.studentNumber||this.data.userInfo.studentNumber,
+        "userSex":this.data.userSex||this.data.userInfo.sex,
+        "userRealName":this.data.userRealName||this.data.userInfo.realName,
       },
-      url: 'userCenter/setNickname',
+      url: 'userCenter/setBaseInf',
     }).then(res => {
       console.log(res)
     }).catch(err => {
@@ -139,7 +142,7 @@ Page({
     request({
       data:{
         "userId":app.globalData.userId,
-        "nickname":this.data.name,
+        "nickname":this.data.name||this.data.userInfo.nickname,
       },
       url: 'userCenter/setNickname',
     }).then(res => {
@@ -147,6 +150,7 @@ Page({
     }).catch(err => {
       
     })
+    this.onLoad()
   },
   toStudyroom(){
     wx.redirectTo({
@@ -183,6 +187,7 @@ Page({
           showBuild:true,
         })
       }else{
+        wx.setStorageSync('dormitoryId', res.data.dormitoryId)
         this.setData({
           showQuit:true,
           showBuild:false,

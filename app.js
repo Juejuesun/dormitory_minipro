@@ -4,7 +4,11 @@ App({
   onLaunch: function () {
     // 展示本地存储能力
     var userId = wx.getStorageSync('userId') || ''
+    var dormitoryId = wx.getStorageSync('dormitoryId') || ''
     if(userId!=''){
+      if(dormitoryId!=0){
+        this.globalData.dormitoryId=dormitoryId
+      }
       this.globalData.userId=userId
       wx.redirectTo({
         url: '/pages/dormitory/dormitory',

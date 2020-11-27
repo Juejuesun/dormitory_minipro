@@ -1,19 +1,19 @@
 <!--pages/flowerroom/flowerroom.wxml-->
 <image src="../../assets/flowerroom/bg1.png" class="birdImg"></image>
-<image src="../../assets/flowerroom/fertilizer.png" class="fertilizerImg"></image>
+<image src="../../assets/flowerroom/fertilizer.png" class="fertilizerImg" bindtap="fertilizer"></image>
 <image src="../../assets/flowerroom/logs.png" class="logImg" bindtap="changeLog"></image>
 <image src="../../assets/flowerroom/sun.png" class="sunImg"></image>
-<image src="../../assets/flowerroom/water.png" class="waterImg"></image>
+<image src="../../assets/flowerroom/water.png" class="waterImg" bindtap="water"></image>
 <view class="waterMes">
   <image src="../../assets/flowerroom/water_tip.png" class="waterTipImg"></image>
-  <text style="font-size:28rpx;">已施肥10G</text>
+  <text style="font-size:28rpx;">已施肥{{soilFertility}}G</text>
 </view>
 <view class="fertilizerMes">
   <image src="../../assets/flowerroom/fertilizer_tip.png" class="fertilizerTipImg"></image>
-  <text style="font-size:28rpx;">已浇水10次</text>
+  <text style="font-size:28rpx;">已浇水{{soilMoisture}}次</text>
 </view>
 <cover-image src="https://pic.downk.cc/item/5fbe4bd6b18d627113a77160.gif" class="flowerImg"></cover-image>
-<text class="flowerLevel">Lv.1</text>
+<text class="flowerLevel">Lv.{{flowerLevel}}</text>
 <view class="flower-log" wx:if="{{showLog}}">
   <view class="log-tip">
     <view>35#211的花</view>
