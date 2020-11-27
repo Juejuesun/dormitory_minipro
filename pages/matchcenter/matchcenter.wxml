@@ -77,7 +77,7 @@
       <text>人生</text>
     </view>
     <view class="tag">
-      <checkbox id="47" bindtap="select" color="#2F80ED" style="position:fixed; left:44%; top:46%;">文静</checkbox>
+      <checkbox id="47" bindtap="select" style="position:fixed; left:44%; top:46%;">文静</checkbox>
       <checkbox id="48" bindtap="select" style="position:fixed; left:67%; top:36%;">活泼</checkbox>
       <checkbox id="49" bindtap="select" style="position:fixed; left:8%; top:27%;">社恐</checkbox>
       <checkbox id="50" bindtap="select" style="position:fixed; left:70%; top:64%;">爱好交友</checkbox>

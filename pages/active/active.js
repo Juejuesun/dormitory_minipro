@@ -1,6 +1,7 @@
 // pages/active/active.js
 import request from '../../service/network.js'
 const app = getApp()
+const time = require("../../utils/util.js");
 Page({
 
   /**
@@ -161,7 +162,10 @@ Page({
     }).then(res => {
       console.log(res)
       this.setData({
-        commentList:res.data.comments,
+        commentList:res.data.comments.map(n=>{
+          n.commentTime=time.formatTime(new Date(n.commentTime))
+          return n
+        }),
         nbTitle: '#'+options.postid,
         Authname:res.data.nicknameOfAuthor,
         postContent:options.postContent,
