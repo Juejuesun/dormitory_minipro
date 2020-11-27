@@ -1,6 +1,7 @@
 // pages/treehool/treehool.js
 import request from '../../service/network.js'
 const app = getApp()
+const time = require("../../utils/util.js");
 Page({
 
   /**
@@ -175,9 +176,13 @@ Page({
     }).then(res => {
       console.log(res)
       this.setData({
-        switch_part:res.data.posts,
+        switch_part:res.data.posts.map(n=>{
+          n.publishTime=time.formatTime(new Date(n.publishTime))
+          return n
+        }),
         search: this.search.bind(this),
       })
+      console.log(this.data.switch_part)
     }).catch(err => {
     })
   },
