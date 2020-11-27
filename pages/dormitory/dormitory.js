@@ -112,7 +112,7 @@ Page({
       if(data.status == 'succeed') {
         let con = []
         for(let val of data.messages) {
-          console.log(format(val.messageTime))
+          // console.log(format(val.messageTime))
           con.push({
             content: val.messageContent,
             time: val.nickname+ ' ' + format(val.messageTime).toString()

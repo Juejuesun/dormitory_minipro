@@ -119,6 +119,9 @@ page{
   font-weight: 600;
   font-size: 36rpx;
   margin-left: 40rpx;
+  table-layout: fixed;
+  word-break: break-all;
+  overflow: hidden;
 }
 .tab-dormitory{
   width: 25%;

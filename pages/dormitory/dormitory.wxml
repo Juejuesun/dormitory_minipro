@@ -19,7 +19,7 @@
           <view class="mes-text">
             <text>{{item.content}}</text>
           </view>
-          <view style="position: absolute;bottom: 0;right: 0; font-size:24rpx;">{{item.time}}</view> 
+          <view style="position: absolute;bottom: 0;right: 13rpx; font-size:24rpx;">{{item.time}}</view> 
         </view>
         
       </scroll-view>
