@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/chatroom/chatroom",
     "pages/dormitory/dormitory",
+    "pages/chatroom/chatroom",
     "pages/usercenter/usercenter",
     
     "pages/flowerroom/flowerroom",
