@@ -1,2 +1,9 @@
-# dormitory_minipro
-The project of software engineering
+# 适友阁
+“适友阁”这款软件是一款宿舍交友养成类App，能够实现通过匹配算法找到合适的舍友，并且通过该软件实现基本的宿舍交流。
+
+## 插件
+* WeUI
+* Vant-UI
+
+
+
