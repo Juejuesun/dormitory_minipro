@@ -7,20 +7,21 @@
   <image class="home-bg" src="https://pic.downk.cc/item/5fbe44d2b18d627113a4b9a0.jpg"></image>
   <view class="black-board" wx:if="{{showBoard}}">
     <image class="exit-board" src="../../assets/dormitory/exit.png" bindtap="showBlackboard"></image>
-    <view class="board-content">
+    <view class="board-content" id="cont">
       <view class="board-tip">宿舍公告栏</view>
-      <scroll-view class="board-list">
+      <scroll-view class="board-list" scroll-into-view="{{toView}}" scroll-y="{{true}}">
+        <view class="board-mes">
+          <view class="mes-img"></view>
+          <input model:value="{{value}}" type="text" class="mes-input"  focus="{{ isfocus }}" bindconfirm="pushems" id="itemInput"/>
+        </view>
         <view class="board-mes" wx:for="{{blackList}}" wx:key="index">
           <view class="mes-img"></view>
           <view class="mes-text">
             <text>{{item.content}}</text>
           </view>
-          <view style="position: absolute;bottom: 0;right: 0; font-size:24rpx;">{{item.time}}</view> 
+          <view style="position: absolute;bottom: 0;right: 13rpx; font-size:24rpx;">{{item.time}}</view> 
         </view>
-        <view class="board-mes">
-          <view class="mes-img"></view>
-          <input model:value="{{value}}" type="text" class="mes-input" bindblur="blurfocus" focus="{{ isfocus }}" bindconfirm="pushems"/>
-        </view>
+        
       </scroll-view>
     </view>
     <image class="add-mes" src="../../assets/dormitory/add.png" bindtap="addnewmes"></image>
