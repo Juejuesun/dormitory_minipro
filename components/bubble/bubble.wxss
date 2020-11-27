@@ -3,12 +3,24 @@
 .textStyle {
   font-size: 35rpx;
 }
+
 .textBox {
   background-color: #ffffff;
-  max-width: 65%;
+  /* max-width: 65%; */
   border-radius: 30rpx;
-  margin: 20rpx;
   padding: 30rpx;
+  table-layout: fixed;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.outBox {
+  margin-left: 20rpx;
+  max-width: 65%;
+}
+
+.advBox {
+  margin-top: 30rpx;
 }
 
 .bubbleBoxLeft {
@@ -17,9 +29,27 @@
 
   margin: 30rpx;
 }
+
 .bubbleBoxRight {
   display: flex;
   flex: 1;
   justify-content: flex-end;
   margin: 30rpx;
+}
+
+.bulbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.rightBox {
+  background-color: #25d87c;
+  margin-right: 20rpx;
+  max-width: 60%;
+}
+
+.nickBox {
+  font-size: 25rpx;
+  margin-left: 10rpx;
 }

@@ -9,32 +9,38 @@ Page({
     chatList: [
       {
         types: 'left',
-        constext: '哈哈哈哈哈哈哈哈',
+        constext: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
+        nickname: '二狗子',
         avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
       },
       {
         types: 'right',
         constext: '聊天内容聊天内容聊天内容聊天内容聊天内容聊天内',
+        nickname: '旺财',
         avadar: 'https://pic.downk.cc/item/5f2421ae14195aa594afa560.jpg'
       },
       {
         types: 'left',
         constext: '什么什么什么？？？？？',
+        nickname: '二狗子',
         avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
       },
       {
         types: 'left',
         constext: '哈哈哈哈哈哈哈哈',
+        nickname: '二狗子',
         avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
       },
       {
         types: 'right',
         constext: '聊天内容聊天内容聊天内容聊天内容聊天内容聊天内',
+        nickname: '旺财',
         avadar: 'https://pic.downk.cc/item/5f2421ae14195aa594afa560.jpg'
       },
       {
         types: 'left',
         constext: '什么什么什么？？？？？',
+        nickname: '二狗子',
         avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
       },
     ],

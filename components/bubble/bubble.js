@@ -15,6 +15,10 @@ Component({
     avadar: {
       type: String,
       value: 'avadar'
+    },
+    nickname: {
+      type: String,
+      value: '旺财'
     }
   },
 

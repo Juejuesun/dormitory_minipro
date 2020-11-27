@@ -1,15 +1,22 @@
 <!--components/bubble/bubble.wxml-->
 <view class="textStyle">
-	<view class="bubbleBoxLeft" wx:if="{{type === 'left'}}" >
-		<van-image round width="3rem" height="3rem" src="{{avadar}}" />
-		<view class="textBox">
-			<text>{{context}}</text>
+	<view class="bubbleBoxLeft" wx:if="{{type === 'left'}}">
+		<van-image round width="3rem" height="3rem" src="{{avadar}}" class="advBox" />
+		<view class="outBox">
+			<text class="nickBox">{{ nickname }}</text>
+			<view class="textBox">
+				<text>{{context}}</text>
+			</view>
 		</view>
+
 	</view>
 	<view class="bubbleBoxRight" wx:else>
-		<view class="textBox">
-			<text>{{context}}</text>
-		</view>
+		<!-- <view class="outBox bulbox"> -->
+			<!-- <text class="nickBox" style="text-align:right;">昵称</text> -->
+			<view class="textBox rightBox">
+				<text>{{context}}</text>
+			</view>
+		<!-- </view> -->
 		<van-image round width="3rem" height="3rem" src="{{avadar}}" />
 	</view>
 
