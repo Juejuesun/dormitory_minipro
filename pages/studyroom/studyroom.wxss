@@ -93,14 +93,103 @@ page{
 .pause-text{
   color: rgba(244,168,101,0.85);
 }
-.tab{
-  position: fixed;
+.bg{
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+}
+.time-list{
+  width: 100%;
+  height: 90%;
+  position: fixed;
   bottom: 0;
-  font-size: 24rpx;
-  margin-bottom: 20rpx;
+  background-color: white;
+  border-radius: 40rpx 40rpx 0 0;
+  z-index: 999;
+}
+.quit-time{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 30rpx;
+}
+.list-tab{
+  height: 100rpx;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: relative;
+  box-shadow: 0 4rpx 10rpx rgba(118, 118, 128,0.6);
+}
+.list-bar{
+  width: 80%;
+  margin: 34rpx auto;
+  border-radius: 20rpx;
+  background-color: rgba(248,246,247,1);
+  height: 89rpx;
   display: flex;
   flex-direction: row;
+}
+.today-card{
+  width: 50%;
+  line-height: 89rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgba(117,117,117,1);
+}
+.week-card{
+  width: 50%;
+  line-height: 89rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgba(117,117,117,1);
+}
+.today-card-hover{
+  font-size: 36rpx;
+  color: rgba(0,0,0,1);
+  border-radius: 45rpx;
+  background-color: rgba(47,128,237,1);
+  width: 50%;
+  line-height: 89rpx;
+  text-align: center;
+  color: white;
+}
+.week-card-hover{
+  font-size: 36rpx;
+  color: rgba(0,0,0,1);
+  border-radius: 45rpx;
+  background-color: rgba(47,128,237,1);
+  width: 50%;
+  line-height: 89rpx;
+  text-align: center;
+  color: white;
+}
+.list-content{
+  width: 100%;
+  height: 100%;
+}
+.list-row{
+  width: 100%;
+  background-color: rgba(248, 248, 248, 0.46);
+  height: 132rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+}
+.person-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.list-row>view{
+  font-size: 40rpx;
+  font-weight: 500;
+  height: 132rpx;
 }
 .tab-dormitory{
   width: 25%;

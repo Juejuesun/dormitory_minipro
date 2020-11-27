@@ -149,13 +149,13 @@ page{
   line-height: 70rpx;
   font-weight: 700;
 }
-.create-mes{
-  width: 80%;
+.create-mes,.join-mes,.quit-mes{
+  width: 70%;
   position: fixed;
-  top: 20%;
-  left: 10%;
+  top: 30%;
+  left: 15%;
   border:2rpx #BDBDBD solid;
-  border-radius: 20rpx;
+  border-radius: 60rpx;
   background-color: white;
   z-index: 999;
 }
@@ -165,17 +165,26 @@ page{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20rpx;
 }
 .create-input>view{
   width: 80%;
   font-size: 36rpx;
   font-weight: 700;
-  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .create-input>view input{
   background-color: #F2F2F2;
   color: black;
   font-size: 30rpx;
+  width: 50%;
+}
+.create-input>view text{
+  width: 50%;
 }
 .control-create{
   width: 100%;
@@ -184,21 +193,14 @@ page{
 }
 .control-create>view{
   width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
   font-size: 36rpx;
   font-weight: 700;
   text-align: center;
 }
 .accept{
   border-right: 2rpx #BDBDBD solid;
-}
-.tab{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  font-size: 24rpx;
-  margin-bottom: 20rpx;
-  display: flex;
-  flex-direction: row;
 }
 .tab-dormitory{
   width: 25%;
