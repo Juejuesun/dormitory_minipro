@@ -3,13 +3,13 @@
     "pages/chatroom/chatroom",
     "pages/dormitory/dormitory",
     "pages/usercenter/usercenter",
+    
     "pages/flowerroom/flowerroom",
     "pages/treehool/treehool",
     "pages/studyroom/studyroom",
     "pages/active/active",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/matchcenter/matchcenter"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",

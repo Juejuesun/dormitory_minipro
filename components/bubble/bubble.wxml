@@ -1,7 +1,23 @@
 <!--components/bubble/bubble.wxml-->
 <view class="textStyle">
-	<van-image round width="3rem" height="3rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-	<view class="leftBox">
-		<text>聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊天内容聊</text>
+	<view class="bubbleBoxLeft" wx:if="{{type === 'left'}}">
+		<van-image round width="3rem" height="3rem" src="{{avadar}}" class="advBox" />
+		<view class="outBox">
+			<text class="nickBox">{{ nickname }}</text>
+			<view class="textBox">
+				<text>{{context}}</text>
+			</view>
+		</view>
+
 	</view>
+	<view class="bubbleBoxRight" wx:else>
+		<!-- <view class="outBox bulbox"> -->
+			<!-- <text class="nickBox" style="text-align:right;">昵称</text> -->
+			<view class="textBox rightBox">
+				<text>{{context}}</text>
+			</view>
+		<!-- </view> -->
+		<van-image round width="3rem" height="3rem" src="{{avadar}}" />
+	</view>
+
 </view>

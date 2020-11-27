@@ -5,14 +5,81 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    height: 0,
+    chatList: [
+      {
+        types: 'left',
+        constext: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
+        nickname: '二狗子',
+        avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
+      },
+      {
+        types: 'right',
+        constext: '聊天内容聊天内容聊天内容聊天内容聊天内容聊天内',
+        nickname: '旺财',
+        avadar: 'https://pic.downk.cc/item/5f2421ae14195aa594afa560.jpg'
+      },
+      {
+        types: 'left',
+        constext: '什么什么什么？？？？？',
+        nickname: '二狗子',
+        avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
+      },
+      {
+        types: 'left',
+        constext: '哈哈哈哈哈哈哈哈',
+        nickname: '二狗子',
+        avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
+      },
+      {
+        types: 'right',
+        constext: '聊天内容聊天内容聊天内容聊天内容聊天内容聊天内',
+        nickname: '旺财',
+        avadar: 'https://pic.downk.cc/item/5f2421ae14195aa594afa560.jpg'
+      },
+      {
+        types: 'left',
+        constext: '什么什么什么？？？？？',
+        nickname: '二狗子',
+        avadar: 'https://img.yzcdn.cn/vant/cat.jpeg'
+      },
+    ],
+    value: '',
+    toView: ''
   },
-
+  onClickRight() {
+    wx.redirectTo({
+      url: '/pages/dormitory/dormitory',
+    })
+  },
+  pushChat() {
+    console.log(this.data.value)
+    // this.data.value = 'hahah'
+    let addList = this.data.chatList
+    addList.push({
+      types: 'right',
+      constext: this.data.value,
+      avadar: 'https://pic.downk.cc/item/5f2421ae14195aa594afa560.jpg'
+    })
+    this.setData({
+      chatList: addList,
+      value: '',
+      toView: `item${this.data.chatList.length-1}` //滚到最底部
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let screenHeight = wx.getSystemInfoSync().windowHeight;
+    this.setData({
+      height: screenHeight - 140,
+    });
 
+    //滚动到最底部
+    this.setData({
+      toView: `item${this.data.chatList.length-1}`
+    })
   },
 
   /**
