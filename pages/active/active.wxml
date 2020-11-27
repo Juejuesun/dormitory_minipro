@@ -11,37 +11,37 @@
   <view class="mes-content">
     <image src="{{img}}" class="collect-img" bindtap="changeCollect"></image>
     <view class="mes-tip">
-      <view>#洞主</view>
-      <view>2020-8-11 10:00</view>
+      <view>#{{Authname}}</view>
+      <view>{{publishTime}}</view>
       <view bindtap="changeReport">举报</view>
     </view>
     <view class="mes-text">
-        请问你们都是怎么看待打工人的？怎么保持良好的心态
+        {{postContent}}
     </view>
   </view>
 </view>
 <view class="comment-list" >
-  <view class="comment-content">
+  <view class="comment-content" wx:for="{{commentList}}" wx:key="index">
     <view class="comment-tip">
-      <view>#1</view>
-      <view>2020-8-11 10:00</view>
+      <view>#{{index+1}}</view>
+      <view>{{item.commentTime}}</view>
     </view>
     <view class="comment-text">
-        请问你们都是怎么看待打工人的？怎么保持良好的心态
+        {{item.commentContent}}
     </view>
   </view>
 </view>
 <view class="comment-window" wx:if="{{showWriteComment}}">
   <view class="comment-input">
     <view class="input-content">
-      <input type="text" placeholder="请输入评论内容..." placeholder-style="color:#828282;"/>
+      <input type="text" placeholder="请输入评论内容..."  model:value="{{active_content}}" placeholder-style="color:#828282;"/>
     </view>
   </view>
   <view class="comment-button">
     <view class="button-return" bindtap="changeShowComment">
       撤销
     </view>
-    <view class="button-publish">
+    <view class="button-publish" bindtap="publish">
       发布
     </view>
   </view>

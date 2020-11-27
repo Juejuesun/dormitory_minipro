@@ -1,4 +1,6 @@
 // pages/treehool/treehool.js
+import request from '../../service/network.js'
+const app = getApp()
 Page({
 
   /**
@@ -10,6 +12,22 @@ Page({
     img3:'../../assets/treehool/3.png',
     img4:'../../assets/treehool/4.png',
     showWriteActive:false,
+    switch_part:[],
+    active_content:'',
+    witch_part:1,
+  },
+  Publish(){
+    request({
+      data:{
+        "userId":app.globalData.userId,
+        "content":this.data.active_content,
+        "partition":this.data.witch_part,
+      },
+      url: 'treeHole/createPost',
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+    })
   },
   changeShowWrite(){
     this.setData({
@@ -20,6 +38,19 @@ Page({
     console.log(e)
     switch(e.currentTarget.id){
       case "1":
+        request({
+          data:{
+            "partition":1,
+          },
+          url: 'treeHole/getPostsOfPartition',
+        }).then(res => {
+          console.log(res)
+          this.setData({
+            switch_part:res.data.posts,
+            witch_part:1
+          })
+        }).catch(err => {
+        })
         this.setData({
           img1:'../../assets/treehool/1_check.png',
           img2:'../../assets/treehool/2.png',
@@ -28,6 +59,19 @@ Page({
         })
         break;
       case "2":
+        request({
+          data:{
+            "partition":2,
+          },
+          url: 'treeHole/getPostsOfPartition',
+        }).then(res => {
+          console.log(res)
+          this.setData({
+            switch_part:res.data.posts,
+            witch_part:2
+          })
+        }).catch(err => {
+        })
         this.setData({
           img1:'../../assets/treehool/1.png',
           img2:'../../assets/treehool/2_check.png',
@@ -36,6 +80,19 @@ Page({
         })
         break;
       case "3":
+        request({
+          data:{
+            "partition":3,
+          },
+          url: 'treeHole/getPostsOfPartition',
+        }).then(res => {
+          console.log(res)
+          this.setData({
+            switch_part:res.data.posts,
+            witch_part:3
+          })
+        }).catch(err => {
+        })
         this.setData({
           img1:'../../assets/treehool/1.png',
           img2:'../../assets/treehool/2.png',
@@ -44,6 +101,18 @@ Page({
         })
         break;
       case "4":
+        request({
+          data:{
+            "userId":app.globalData.userId,
+          },
+          url: 'treeHole/getPostsOfCollected',
+        }).then(res => {
+          console.log(res)
+          this.setData({
+            switch_part:res.data.posts,
+          })
+        }).catch(err => {
+        })
         this.setData({
           img1:'../../assets/treehool/1.png',
           img2:'../../assets/treehool/2.png',
@@ -53,11 +122,12 @@ Page({
         break;
       default:
         break;
- } 
+    } 
   },
-  toActive(){
+  toActive(e){
+    console.log(e)
     wx.navigateTo({
-      url: '/pages/active/active',
+      url: '/pages/active/active?postid='+e.currentTarget.dataset.postid+'&postContent='+e.currentTarget.dataset.postcontent+'&publishTime='+e.currentTarget.dataset.publishtime,
     })
   },
   toDormitory(){
@@ -75,11 +145,41 @@ Page({
       url: '/pages/usercenter/usercenter',
     })
   },
+  search: function (value) {
+    return request({
+      data:{
+        "content":value,
+      },
+      url: 'treeHole/getPostsByContent',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        switch_part:res.data.posts,
+        witch_part:3
+      })
+    }).catch(err => {
+    })
+  },
+  selectResult: function (e) {
+      console.log('select result', e.detail)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    request({
+      data:{
+        "partition":1,
+      },
+      url: 'treeHole/getPostsOfPartition',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        switch_part:res.data.posts,
+        search: this.search.bind(this),
+      })
+    }).catch(err => {
+    })
   },
 
   /**

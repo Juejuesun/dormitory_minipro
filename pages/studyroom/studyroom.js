@@ -11,12 +11,42 @@ Page({
     fertilizerQuantity:0,
     studyTimeTotal:0,
     numberOfStudy:0,
-    M:'',
-    S:'',
+    M:'00',
+    S:'00',
     count:0,
     timer:0,
     today_check:'today-card-hover',
-    week_check:'week-card'
+    week_check:'week-card',
+    showTimeList:false,
+    today_time:[],
+    week_time:[]
+  },
+  quitTimeList(){
+    this.setData({
+      showTimeList:false
+    })
+  },
+  changeTimeList(){
+    request({
+      url: 'study/rankOfToday',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        showTimeList:true,
+        today_time:res.data.inf
+      })
+    }).catch(err => {
+    }),
+    request({
+      url: 'study/rankOfWeek',
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        showTimeList:true,
+        week_time:res.data.inf
+      })
+    }).catch(err => {
+    })
   },
   switchNav: function(e) {
     var page = this;

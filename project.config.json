@@ -104,6 +104,12 @@
         {
           "name": "pages/logs/logs",
           "pathName": "pages/logs/logs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/matchcenter/matchcenter",
+          "pathName": "pages/matchcenter/matchcenter",
           "scene": null
         }
       ]

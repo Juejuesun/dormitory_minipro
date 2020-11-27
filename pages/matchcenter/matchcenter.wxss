@@ -1,0 +1,59 @@
+/* pages/matchcenter/matchcenter.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.introduce{
+  height: 100%;
+}
+.tip{
+  width: 30%;
+  margin: 0 auto;
+  border-bottom: 2rpx #2F80ED solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10rpx;
+}
+.tip>text{
+  font-size: 48rpx;
+  font-weight: 800;
+}
+.tag>checkbox{
+  background-color: white;
+  font-weight: 700;
+  padding:10rpx;
+  border-radius: 20rpx;
+  border:2rpx #2F80ED solid;
+}
+.tag{
+  width: 100%;
+  height: 100%;
+}
+.control-create{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.control-create>view{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  text-align: center;
+}
+.accept{
+  border-right: 2rpx #BDBDBD solid;
+}
+.quit-mes{
+  width: 70%;
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  border:2rpx #BDBDBD solid;
+  border-radius: 60rpx;
+  background-color: white;
+  z-index: 999;
+}

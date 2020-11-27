@@ -177,17 +177,19 @@ page{
   background-color: rgba(248, 248, 248, 0.46);
   height: 132rpx;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-content: space-between;
+  align-content: space-around;
+  justify-content: center;
 }
-.tab{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  font-size: 24rpx;
-  margin-bottom: 20rpx;
-  display: flex;
-  flex-direction: row;
+.person-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.list-row>view{
+  font-size: 40rpx;
+  font-weight: 500;
+  height: 132rpx;
 }
 .tab-dormitory{
   width: 25%;

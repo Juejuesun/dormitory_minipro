@@ -1,1 +1,37 @@
 /* pages/chatroom/chatroom.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #F2F2F2;
+}
+.bgc {
+  background-color: #F2F2F2;
+}
+.imgHead {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #b4adad;
+}
+.imgClose {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 40rpx;
+  margin-top: 30rpx;
+}
+
+.inputBox {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}
+.inputBtn {
+  margin: 30rpx 0 30rpx 0;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+.inoutIn {
+  width: 78%;
+}

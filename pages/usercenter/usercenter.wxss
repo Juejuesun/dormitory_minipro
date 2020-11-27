@@ -202,15 +202,6 @@ page{
 .accept{
   border-right: 2rpx #BDBDBD solid;
 }
-.tab{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  font-size: 24rpx;
-  margin-bottom: 20rpx;
-  display: flex;
-  flex-direction: row;
-}
 .tab-dormitory{
   width: 25%;
   display: flex;

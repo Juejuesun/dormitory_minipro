@@ -1,2 +1,18 @@
 <!--pages/chatroom/chatroom.wxml-->
-<text>pages/chatroom/chatroom.wxml</text>
+<view class="bgc">
+	<van-nav-bar right-text="X" bind:click-right="onClickRight" />
+	<!-- <view class="imgHead">
+		<image src="../../assets/chatroom/close.png" mode='aspectFit' class="imgClose"></image>
+	</view> -->
+  <view>
+    <chat-bubble/>
+  </view>
+	<view class="inputBox">
+		<van-cell-group class="inputBtn">
+			<van-field value="{{ sms }}" center border="{{ false }}" class="inoutIn">
+				<!-- <van-button slot="button" type="primary">发送验证码</van-button> -->
+			</van-field>
+			<van-button type="primary" class="btnIn">按钮</van-button>
+		</van-cell-group>
+	</view>
+</view>

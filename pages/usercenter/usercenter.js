@@ -1,6 +1,7 @@
 // pages/usercenter/usercenter.js
 import request from '../../service/network.js'
 const app = getApp()
+const time = require("../../utils/util.js");
 Page({
 
   /**
@@ -21,7 +22,15 @@ Page({
     showQuit:false,
     showBuild:false,
     showJoinmes:false,
-    showQuitmes:false
+    showQuitmes:false,
+    studentNumber:'',
+    userSex:'',
+    userRealName:'',
+  },
+  toMatchcenter(){
+    wx.navigateTo({
+      url: '/pages/matchcenter/matchcenter',
+    })
   },
   quitRoom(){
     request({
@@ -31,8 +40,7 @@ Page({
       url: 'userCenter/quitDormitory',
     }).then(res => {
       console.log(res)
-      this.changeQuit()  
-      this.changeBuild()
+      this.onLoad()
     }).catch(err => {
       
     })
@@ -117,6 +125,19 @@ Page({
     request({
       data:{
         "userId":app.globalData.userId,
+        "studentNumber":this.data.studentNumber,
+        "userSex":this.data.userSex,
+        "userRealName":this.data.userRealName,
+      },
+      url: 'userCenter/setNickname',
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      
+    })
+    request({
+      data:{
+        "userId":app.globalData.userId,
         "nickname":this.data.name,
       },
       url: 'userCenter/setNickname',
@@ -154,7 +175,6 @@ Page({
       console.log(res)
       this.setData({
         userInfo:res.data,
-        name:res.data.nickname
       })
       if(res.data.dormitoryId==0){
         this.setData({

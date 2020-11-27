@@ -136,15 +136,6 @@ page{
   font-size: 36rpx;
   font-weight: 600;
 }
-.tab{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  font-size: 24rpx;
-  margin-bottom: 20rpx;
-  display: flex;
-  flex-direction: row;
-}
 .tab-dormitory{
   width: 25%;
   display: flex;

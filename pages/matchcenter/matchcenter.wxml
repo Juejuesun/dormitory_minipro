@@ -1,0 +1,101 @@
+<!--pages/matchcenter/matchcenter.wxml-->
+<swiper class="introduce" indicator-dots="{{true}}" >
+  <swiper-item>
+    <view class="tip">
+      <image src="../../assets/matchcenter/book.png" style="width:52rpx; height:52rpx;"></image>
+      <text>学习</text>
+    </view>
+    <view class="tag">
+      <checkbox id="0" class="tag1" bindtap="select" style="position:fixed; left:20%; top:44%;">考研党</checkbox>
+      <checkbox id="1" bindtap="select" style="position:fixed; left:40%; top:56%;">毕业就打工人</checkbox>
+      <checkbox id="2" bindtap="select" style="position:fixed; left:60%; top:46%;">自觉的读书人</checkbox>
+      <checkbox id="3" bindtap="select" style="position:fixed; left:43%; top:34%;">自觉性差</checkbox>
+      <checkbox id="4" bindtap="select" style="position:fixed; left:68%; top:80%;">相约读书</checkbox>
+      <checkbox id="5" bindtap="select" style="position:fixed; left:14%; top:21%;">一人游书海</checkbox>
+      <checkbox id="6" bindtap="select" style="position:fixed; left:40%; top:13%;">爱提问</checkbox>
+      <checkbox id="7" bindtap="select" style="position:fixed; left:12%; top:78%;">独立解决</checkbox>
+      <checkbox id="8" bindtap="select" style="position:fixed; left:2%; top:64%;">优秀理科生</checkbox>
+      <checkbox id="9" bindtap="select" style="position:fixed; left:65%; top:8%;">儒雅文科生</checkbox>
+      <checkbox id="10" bindtap="select" style="position:fixed; left:2%; top:30%;">天赋型选手</checkbox>
+      <checkbox id="11" bindtap="select" style="position:fixed; left:64%; top:26%;">努力拼搏者</checkbox>
+      <checkbox id="12" bindtap="select" style="position:fixed; left:56%; top:70%;">竞赛得奖选手</checkbox>
+      <checkbox id="13" bindtap="select" style="position:fixed; left:2%; top:8%;">学生工作强者</checkbox>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="tip">
+      <image src="../../assets/matchcenter/clock.png" style="width:58rpx; height:56rpx;"></image>
+      <text>生活</text>
+    </view>
+    <view class="tag">
+      <checkbox id="14" bindtap="select" style="position:fixed; left:40%; top:56%;">早睡早起</checkbox>
+      <checkbox id="15" bindtap="select" style="position:fixed; left:67%; top:46%;">晚睡晚起</checkbox>
+      <checkbox id="16" bindtap="select" style="position:fixed; left:20%; top:44%;">爱好安静</checkbox>
+      <checkbox id="17" bindtap="select" style="position:fixed; left:43%; top:34%;">噪音无感</checkbox>
+      <checkbox id="18" bindtap="select" style="position:fixed; left:68%; top:80%;">工装裤</checkbox>
+      <checkbox id="19" bindtap="select" style="position:fixed; left:36%; top:21%;">JK</checkbox>
+      <checkbox id="20" bindtap="select" style="position:fixed; left:42%; top:12%;">Lolita</checkbox>
+      <checkbox id="21" bindtap="select" style="position:fixed; left:8%; top:78%;">DK</checkbox>
+      <checkbox id="22" bindtap="select" style="position:fixed; left:4%; top:58%;">汉服</checkbox>
+      <checkbox id="23" bindtap="select" style="position:fixed; left:70%; top:8%;">清淡</checkbox>
+      <checkbox id="24" bindtap="select" style="position:fixed; left:2%; top:29%;">无辣不欢</checkbox>
+      <checkbox id="25" bindtap="select" style="position:fixed; left:64%; top:26%;">火锅</checkbox>
+      <checkbox id="26" bindtap="select" style="position:fixed; left:40%; top:79%;">烤肉</checkbox>
+      <checkbox id="27" bindtap="select" style="position:fixed; left:18%; top:8%;">日料</checkbox>
+      <checkbox id="28" bindtap="select" style="position:fixed; left:10%; top:19%;">韩料</checkbox>
+      <checkbox id="29" bindtap="select" style="position:fixed; left:16%; top:68%;">动物真可爱</checkbox>
+      <checkbox id="30" bindtap="select" style="position:fixed; left:60%; top:64%;">不喜欢动物</checkbox>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="tip">
+      <image src="../../assets/matchcenter/game.png" style="width:60rpx; height:44rpx;"></image>
+      <text>兴趣</text>
+    </view>
+    <view class="tag">
+      <checkbox id="31" bindtap="select" style="position:fixed; left:40%; top:56%;">王者荣耀</checkbox>
+      <checkbox id="32" bindtap="select" style="position:fixed; left:67%; top:42%;">和平精英</checkbox>
+      <checkbox id="33" bindtap="select" style="position:fixed; left:16%; top:44%;">斗地主</checkbox>
+      <checkbox id="34" bindtap="select" style="position:fixed; left:37%; top:37%;">球类运动</checkbox>
+      <checkbox id="35" bindtap="select" style="position:fixed; left:78%; top:74%;">听歌</checkbox>
+      <checkbox id="36" bindtap="select" style="position:fixed; left:36%; top:24%;">韩综/韩剧</checkbox>
+      <checkbox id="37" bindtap="select" style="position:fixed; left:46%; top:12%;">日剧</checkbox>
+      <checkbox id="38" bindtap="select" style="position:fixed; left:46%; top:72%;">英美剧</checkbox>
+      <checkbox id="39" bindtap="select" style="position:fixed; left:4%; top:56%;">追星</checkbox>
+      <checkbox id="40" bindtap="select" style="position:fixed; left:74%; top:12%;">美食</checkbox>
+      <checkbox id="41" bindtap="select" style="position:fixed; left:12%; top:29%;">乐器</checkbox>
+      <checkbox id="42" bindtap="select" style="position:fixed; left:76%; top:26%;">画画</checkbox>
+      <checkbox id="43" bindtap="select" style="position:fixed; left:76%; top:58%;">麻将</checkbox>
+      <checkbox id="44" bindtap="select" style="position:fixed; left:18%; top:8%;">魔方</checkbox>
+      <checkbox id="45" bindtap="select" style="position:fixed; left:8%; top:18%;">收藏</checkbox>
+      <checkbox id="46" bindtap="select" style="position:fixed; left:20%; top:68%;">桌游</checkbox>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="tip">
+      <image src="../../assets/matchcenter/symbol.png" style="width:48rpx; height:48rpx;"></image>
+      <text>人生</text>
+    </view>
+    <view class="tag">
+      <checkbox id="47" bindtap="select" color="#2F80ED" style="position:fixed; left:44%; top:46%;">文静</checkbox>
+      <checkbox id="48" bindtap="select" style="position:fixed; left:67%; top:36%;">活泼</checkbox>
+      <checkbox id="49" bindtap="select" style="position:fixed; left:8%; top:27%;">社恐</checkbox>
+      <checkbox id="50" bindtap="select" style="position:fixed; left:70%; top:64%;">爱好交友</checkbox>
+      <checkbox id="51" bindtap="select" style="position:fixed; left:36%; top:27%;">乐观向上</checkbox>
+      <checkbox id="52" bindtap="select" style="position:fixed; left:46%; top:12%;">老网抑云</checkbox>
+      <checkbox id="53" bindtap="select" style="position:fixed; left:40%; top:62%;">天道酬勤</checkbox>
+      <checkbox id="54" bindtap="select" style="position:fixed; left:8%; top:14%;">快乐咸鱼</checkbox>
+      <checkbox id="55" bindtap="select" style="position:fixed; left:70%; top:20%;">以和为贵</checkbox>
+      <checkbox id="56" bindtap="select" style="position:fixed; left:70%; top:50%;">有仇必报</checkbox>
+      <checkbox id="57" bindtap="select" style="position:fixed; left:8%; top:40%;">平淡是真</checkbox>
+      <checkbox id="58" bindtap="select" style="position:fixed; left:8%; top:55%;">轰轰烈烈</checkbox>
+    </view>
+    <view class="quit-mes" wx:if="{{showQuitmes}}">
+      <view class="control-create">
+        <view class="accept" bindtap="matching">确认</view>
+        <view bindtap="quitCreate" bindtap="changeQuit">取消</view>
+      </view>
+    </view>
+    <button class='bottom' bindtap="match" style="width:60%;  color:#2F80ED;  background-color:white; border-radius: 40rpx; position:fixed; border:4rpx #2F80ED solid; left:20%; top:86%">开始匹配</button>
+  </swiper-item>
+</swiper>

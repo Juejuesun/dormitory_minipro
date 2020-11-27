@@ -6,7 +6,7 @@
     </view>
     <view class="user-name">
       <view class="name-text">
-        <input type="text" model:value="{{name}}"/>
+        <input type="text" model:value="{{name}}"  placeholder="{{userInfo.nickname}}"/>
       </view>
     </view>
     <image class="edit-img" src="../../assets/usercenter/edit.png" bindtap="changeName"></image>
@@ -18,7 +18,7 @@
           <image src="../../assets/usercenter/user_pin.png" class="user_pin-img"></image>
         </view>
         <text>学号：</text>
-        <input type="text" placeholder="{{userInfo.studentNumber}}" placeholder-style="color:#C2C2C2;"/>
+        <input type="text"  model:value="{{studentNumber}}"   placeholder="{{userInfo.studentNumber}}"placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
     <view >
@@ -27,7 +27,7 @@
           <image src="../../assets/usercenter/id_card.png" class="id_card-img"></image>
         </view>
         <text>姓名：</text>
-        <input type="text" placeholder="{{userInfo.realName}}" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" model:value="{{userRealName}}"   placeholder="{{userInfo.realName}}"placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
     <view>
@@ -36,7 +36,7 @@
           <image src="../../assets/usercenter/gender.png" class="gender-img"></image>
         </view>
         <text>性别：</text>
-        <input type="text" placeholder="{{userInfo.sex}}" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" model:value="{{userSex}}" placeholder="{{userInfo.sex}}" placeholder-style="color:#C2C2C2;"/>
       </view>
     </view>
     <view>
@@ -45,7 +45,7 @@
           <image src="../../assets/usercenter/home_heart.png" class="home_heart-img"></image>
         </view>
         <text>宿舍：</text>
-        <input type="text" placeholder="{{userInfo.dormitoryId}}" placeholder-style="color:#C2C2C2;"/>
+        <input type="text" placeholder="{{userInfo.dormitoryId}}" disabled="{{true}}" placeholder-style="color:#000000;"/>
       </view>
     </view>
   </view>
@@ -60,7 +60,7 @@
         <view class="join-room" bindtap="changeJoin">加入宿舍></view>
         <view class="quit-list" bindtap="changeBuild">取消</view>
       </view>
-      <view class="find-person">兴趣匹配</view>
+      <view class="find-person" bindtap="toMatchcenter">兴趣匹配</view>
     </view>
   </view>
   <view class="create-mes" wx:if="{{showBuildmes}}">

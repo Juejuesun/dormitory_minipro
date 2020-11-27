@@ -8,3 +8,13 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.tab{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}

@@ -27,7 +27,7 @@ App({
             }).then(res => {
               console.log(res)
               wx.setStorageSync('userId', res.data.userId)
-              /* this.globalData.userId=res.data.userId */
+              this.globalData.userId=res.data.userId
               wx.redirectTo({
                 url: '/pages/dormitory/dormitory',
               })
@@ -40,6 +40,6 @@ App({
     })
   },
   globalData: {
-    userId:"123456"
+    userId:"268639997"
   }
 })

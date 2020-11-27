@@ -6,10 +6,10 @@
       <text>: {{fertilizerQuantity}}袋</text>
     </view>
     <view class="flag">
-      <image class="flag-img" src="../../assets/studyroom/flag.png"></image>
+      <image class="flag-img" src="../../assets/studyroom/flag.png" bindtap="changeTimeList"></image>
     </view>
     <view class="time">
-      <image class="time-img" src="../../assets/studyroom/clock.png"></image>
+      <image class="time-img" src="../../assets/studyroom/clock.png" ></image>
       <text>: {{studyTimeTotal}}h</text>
     </view>
   </view>
@@ -36,11 +36,11 @@
       <text class="end-text">结 束</text>
     </view>
   </view>
-  <view class="bg" wx:if="{{true}}"></view>
-  <view class="time-list" wx:if="{{true}}">
+  <view class="bg" wx:if="{{showTimeList}}"></view>
+  <view class="time-list" wx:if="{{showTimeList}}">
     <view class="list-tab">
       时长排行榜
-      <image src="../../assets/treehool/arrow_down.png" class="quit-time"></image>
+      <image src="../../assets/treehool/arrow_down.png" class="quit-time" bindtap="quitTimeList"></image>
     </view>
     <view class="list-bar">
       <view class="{{today_check}}" bindtap='switchNav' id="0">今日排行</view>
@@ -48,20 +48,20 @@
     </view>
     <swiper style='height:840rpx;' current='{{currentTab}}' vertical="{{false}}" bindchange="changeCss">
       <swiper-item class="today-list" id='0'>
-        <scroll-view class="list-content">
-          <view class="list-row">
+        <scroll-view class="list-content" scroll-y="true">
+          <view class="list-row" wx:for="{{today_time}}" wx:key="index">
             <image class="person-img"></image>
-            <view class="person-name"></view>
-            <view class="person-time"></view>
+            <view class="person-name">{{item.nickname}}</view>
+            <view class="person-time">{{item.studyTimeToday}}h</view>
           </view>
         </scroll-view>
       </swiper-item>
       <swiper-item class="week-list" id='1'>
-        <scroll-view class="list-content">
-          <view class="list-row">
+        <scroll-view class="list-content" scroll-y="true">
+          <view class="list-row" wx:for="{{week_time}}" wx:key="index">
             <image class="person-img"></image>
-            <view class="person-name"></view>
-            <view class="person-time"></view>
+            <view class="person-name">{{item.nickname}}</view>
+            <view class="person-time">{{item.studyTimeWeek}}h</view>
           </view>
         </scroll-view>
       </swiper-item>
