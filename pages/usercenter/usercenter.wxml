@@ -2,7 +2,7 @@
 <view style="height: {{height}}px;">
   <view class="user-top">
     <view class="user-img">
-      <image src=""></image>
+      <image src="{{userInfo.photo}}"></image>
     </view>
     <view class="user-name">
       <view class="name-text">

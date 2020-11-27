@@ -2,5 +2,6 @@
   "usingComponents": {
     
   },
-  "navigationBarTitleText": "一起种花"
+  "navigationBarTitleText": "一起种花",
+  "disableScroll": false
 }

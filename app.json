@@ -1,14 +1,13 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/dormitory/dormitory",
     "pages/chatroom/chatroom",
     "pages/usercenter/usercenter",
-    
     "pages/flowerroom/flowerroom",
     "pages/treehool/treehool",
     "pages/studyroom/studyroom",
     "pages/active/active",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
